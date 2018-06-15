@@ -1,0 +1,186 @@
+$blue: #75B5C1;
+$dark-grey: #393D3F;
+$yellow: #FAC31C;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,body,.container{
+  height: 100%;
+}
+
+body{
+  font-family: 'Open Sans', Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+  font-size: 22px;
+  color: $dark-grey;
+}
+
+.container{
+  display: flex;
+  
+  .col-50{
+    width: 100%;
+    display: flex;
+    
+    &:nth-child(1){
+      background: $blue url(https://gallery.mailchimp.com/c9e9f1cfeeebd9f9368553da6/images/aabb003f-80ec-4a64-bb8b-44ac81d2f323.png) repeat center center;
+      align-items: center;
+      justify-content: center;
+
+      img{
+        width: 80%;
+        transition: transform 1s ease-in-out;
+        &:hover{
+            transform: rotateY(360deg);
+            transform-style: preserve-3d;
+            perspective: 1000;
+        }
+      }
+      
+    }
+    
+    &:nth-child(2){
+      position: relative;
+      
+      .social{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        
+        img{
+          width: 50px;
+          height: auto;
+          padding: 3px;
+          transition: 200ms opacity ease-in-out; 
+          &:hover{
+            opacity: .8;
+          }
+        }
+      }
+    }
+
+    .main-content{
+      overflow-y: auto;
+      
+      .arrow{
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        img{
+          width: 20px;
+        }
+      }
+      
+      .main-inner-content{
+        position: relative;
+        padding: 0 40px 20px;
+
+        h2{
+          font-family: Open Sans Condensed, Helvetica Neue,Helvetica,Arial,sans-serif;
+          color: #75B5C1;
+          font-size: 30px;
+          margin-top: 50px;
+
+          &:nth-of-type(1){
+            margin-top: 0;
+            padding-top: 200px;
+          }
+        }
+        
+        p{
+          margin-top: 0;
+          margin-bottom: 35px;
+        }
+      }
+    }
+    
+  } 
+}
+
+.signature{
+  
+  img{
+      vertical-align: middle;  
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+  }
+  
+  span{
+    vertical-align: middle;    
+    padding-left: 20px;
+    font-size: 80%;
+    display: inline-block;
+  }
+}
+
+#mc_embed_signup{
+  background: #F8F8F8;
+  
+  form{
+    padding: 15px 20px;
+  }
+  
+  #mc-embedded-subscribe {
+    background: $yellow;
+    color: $dark-grey;
+    font-weight: bold;
+    
+    &:hover{
+      background: lighten($yellow, 10%);
+    }
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $blue;
+    opacity: .5
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $blue;
+    opacity: .5
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $blue;
+    opacity: .5
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $blue;
+    opacity: .5
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .container{
+    display: block;
+    
+  .col-50{
+    &:nth-child(1){      
+      img{
+        width: 200px;
+        padding: 20px 0;
+      }
+    }
+    .main-content{
+      .main-inner-content{
+        top: 0;
+        
+        h2{
+          line-height: 1.3;
+        }
+        
+        h2:nth-of-type(1){
+            padding-top: 100px;
+        }
+        
+      }
+    }
+  }
+    
+  }  
+}
