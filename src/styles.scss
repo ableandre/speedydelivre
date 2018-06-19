@@ -161,6 +161,9 @@ body{
     background: $yellow;
     color: $dark-grey;
     font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
 
     &:hover{
       background: lighten($yellow, 10%);
