@@ -22,11 +22,11 @@ body{
 
 .container{
   display: flex;
-  
+
   .col-50{
     width: 100%;
     display: flex;
-    
+
     &:nth-child(1){
       background: $blue url(https://gallery.mailchimp.com/c9e9f1cfeeebd9f9368553da6/images/aabb003f-80ec-4a64-bb8b-44ac81d2f323.png) repeat center center;
       align-items: center;
@@ -41,22 +41,22 @@ body{
             perspective: 1000;
         }
       }
-      
+
     }
-    
+
     &:nth-child(2){
       position: relative;
-      
+
       .social{
         position: absolute;
         top: 10px;
         right: 10px;
-        
+
         img{
           width: 50px;
           height: auto;
           padding: 3px;
-          transition: 200ms opacity ease-in-out; 
+          transition: 200ms opacity ease-in-out;
           &:hover{
             opacity: .8;
           }
@@ -67,7 +67,7 @@ body{
     .main-content{
       width: 100%;
       overflow-y: auto;
-      
+
       .arrow{
         position: fixed;
         bottom: 5px;
@@ -76,7 +76,7 @@ body{
           width: 20px;
         }
       }
-      
+
       .main-inner-content{
         position: relative;
         padding: 0 40px 20px;
@@ -92,7 +92,7 @@ body{
             padding-top: 200px;
           }
         }
-        
+
         p{
           margin-top: 0;
           margin-bottom: 35px;
@@ -118,21 +118,21 @@ body{
 
       }
     }
-    
-  } 
+
+  }
 }
 
 .signature{
-  
+
   img{
-      vertical-align: middle;  
+      vertical-align: middle;
       width: 70px;
       height: 70px;
       border-radius: 50%;
   }
-  
+
   span{
-    vertical-align: middle;    
+    vertical-align: middle;
     padding-left: 20px;
     font-size: 80%;
     display: inline-block;
@@ -140,17 +140,28 @@ body{
 }
 
 #mc_embed_signup{
-  background: #F8F8F8;
-  
-  form{
+  background: #FFF;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 3px;
+  overflow: auto;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+
+  .form-header-cta, form{
     padding: 15px 20px;
   }
-  
+
+  .form-header-cta{
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,.03);
+    font-size: 80%;
+  }
+
   #mc-embedded-subscribe {
     background: $yellow;
     color: $dark-grey;
     font-weight: bold;
-    
+
     &:hover{
       background: lighten($yellow, 10%);
     }
@@ -178,9 +189,9 @@ body{
 @media only screen and (max-width: 768px){
   .container{
     display: block;
-    
+
   .col-50{
-    &:nth-child(1){      
+    &:nth-child(1){
       img{
         width: 200px;
         padding: 20px 0;
@@ -189,18 +200,18 @@ body{
     .main-content{
       .main-inner-content{
         top: 0;
-        
+
         h2{
           line-height: 1.3;
         }
-        
+
         h2:nth-of-type(1){
             padding-top: 100px;
         }
-        
+
       }
     }
   }
-    
-  }  
+
+  }
 }
